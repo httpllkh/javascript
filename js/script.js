@@ -1,11 +1,18 @@
 "use strict";
 
-let arr = {
-    a: 50
-}; 
+const numberOfFilms = +prompt("Сколько фильмов вы уже посмотрели?");
 
-var peremen;
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-console.log(arr);
+let second = prompt("Один из последних просмотренных фильмов"),
+    third = +prompt("На сколько вы его оцените?");
+    
+personalMovieDB.movies[second] = third;
 
-a = 15;
+console.log(personalMovieDB);
